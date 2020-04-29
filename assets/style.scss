@@ -1,0 +1,109 @@
+---
+---
+
+// bootstrap
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
+// google fonts
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+// fonts
+$font-size: 1.3em;
+$font-size-subheader: 1.8em;
+$font-size-header: 3.2em;
+$font-size-jumbo: 4em;
+
+$font-family: 'Raleway', sans-serif;
+$font-family-secondary: 'Roboto', sans-serif;
+$font-weight-light: 300;
+$font-weight-heavy: 700;
+
+// colors
+$background-color: #ffffff;
+$background-color-dark: #0e171c;
+$font-color: #000000;
+$font-color-dark: #ffffff;
+$font-accent-color: #0070c0;
+$font-accent-color-dark: #039cfd;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  background-color: $background-color;
+  padding: 7.5em 7.5em; // top-bottom left-right
+  font-family: $font-family;
+  font-size: $font-size;
+}
+
+main {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+
+  .intro {
+    text-align: left;
+    padding: 7.5em 0em;
+
+    .intro-title {
+      font-size: $font-size-jumbo;
+      font-family: $font-family;
+      font-weight: $font-weight-heavy;
+      color: $font-accent-color;
+    }
+
+    .intro-content {
+      font-size: $font-size;
+      font-family: $font-family-secondary;
+    }
+  }
+
+  .section {
+    .section-title {
+      padding: 0em;
+
+      font-size: $font-size-header;
+      font-family: $font-family;
+      font-weight: $font-weight-heavy;
+    }
+
+    .section-content {
+      padding: 0em;
+
+      .supertitle {
+        font-size: $font-size;
+        font-family: $font-family;
+        font-weight: $font-weight-light;
+        margin-bottom: 0em;
+      }
+
+      .title {
+        font-size: $font-size-subheader;
+        font-family: $font-family;
+        font-weight: $font-weight-heavy;
+        color: $font-accent-color;
+        margin-bottom: 0em;
+      }
+
+      .subtitle {
+        font-size: $font-size;
+        font-family: $font-family-secondary;
+      }
+
+      .content {
+        font-size: $font-size;
+        font-weight: $font-weight-light;
+      }
+    }
+  }
+}
+
+footer {
+  flex-shrink: none;
+  text-align: right;
+}
