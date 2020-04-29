@@ -1,10 +1,9 @@
 ---
 ---
-
 // bootstrap
 @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
 // google fonts
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 // fonts
@@ -15,8 +14,8 @@ $font-size-jumbo: 4em;
 
 $font-family: 'Raleway', sans-serif;
 $font-family-secondary: 'Roboto', sans-serif;
-$font-weight-light: 300;
-$font-weight-heavy: 700;
+$font-weight-regular: 400;
+$font-weight-heavy: 600;
 
 // colors
 $background-color: #ffffff;
@@ -26,46 +25,51 @@ $font-color-dark: #ffffff;
 $font-accent-color: #0070c0;
 $font-accent-color-dark: #039cfd;
 
+// markdown injectable formatting
+.accent-color { // usage: {: .accent-color}
+  color: $font-accent-color;
+}
+
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
   display: flex;
   flex-direction: column;
+  max-width: 125rem;
+  margin: auto;
+  padding: 7rem 10rem; // top-bottom left-right
 
   background-color: $background-color;
-  padding: 7.5em 7.5em; // top-bottom left-right
   font-family: $font-family;
+  font-weight: $font-weight-regular;
   font-size: $font-size;
 }
 
 main {
-  flex-grow: 1;
-  flex-shrink: 0;
-  flex-basis: auto;
+  flex-grow: 1 0 auto;
 
   .intro {
-    text-align: left;
-    padding: 7.5em 0em;
+    padding: 7.5em 1rem;
 
     .intro-title {
-      font-size: $font-size-jumbo;
-      font-family: $font-family;
-      font-weight: $font-weight-heavy;
       color: $font-accent-color;
+      font-size: $font-size-jumbo;
     }
 
     .intro-content {
-      font-size: $font-size;
       font-family: $font-family-secondary;
+      font-size: $font-size;
     }
   }
 
   .section {
+    padding-bottom: 4rem;
+
     .section-title {
-      padding: 0em;
+      padding: 1rem;
 
       font-size: $font-size-header;
       font-family: $font-family;
@@ -73,31 +77,57 @@ main {
     }
 
     .section-content {
-      padding: 0em;
+      padding: 1rem;
+      padding-bottom: 2rem;
 
-      .supertitle {
-        font-size: $font-size;
-        font-family: $font-family;
-        font-weight: $font-weight-light;
-        margin-bottom: 0em;
-      }
-
-      .title {
+      // markdown overrides
+      h2 {
         font-size: $font-size-subheader;
-        font-family: $font-family;
-        font-weight: $font-weight-heavy;
-        color: $font-accent-color;
-        margin-bottom: 0em;
       }
 
-      .subtitle {
+      h3 {
+        font-size: $font-size;
+      }
+
+      h4 {
         font-size: $font-size;
         font-family: $font-family-secondary;
       }
 
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-top: 0.4em;
+        margin-bottom: 0.4em;
+      }
+
+      p,
       .content {
         font-size: $font-size;
-        font-weight: $font-weight-light;
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+      }
+
+      ul,
+      ol {
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+        padding-left: 0;
+      }
+
+      li {
+        margin-bottom: 0.2em;
+        font-size: $font-size;
+      }
+
+      img {
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+        max-width: 100%;
+        max-height: 100%;
       }
     }
   }

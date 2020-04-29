@@ -9,11 +9,11 @@
 
     <!-- navbar -->
 
-    <main class="container" aria-label="Content">
+    <main class="container-fluid">
       <!-- intro -->
       <div class="row">
-        <div class="intro col-sm-6" aria-label="Intro">
-          <div class="intro-title">{{ site.intro_title }}</div>
+        <div class="intro col-sm-8" aria-label="Intro">
+          <div class="intro-title">{{ site.intro_title | strip | markdownify }}</div>
           <div class="intro-content">
             {{ site.intro_content | strip | markdownify }}
           </div>
@@ -22,7 +22,7 @@
 
       <!-- body -->
       {% for section in site.sections %}
-      <div class="section row">
+      <div class="section row" aria-label="Sections">
         <div class="section-title col-sm-6">{{ section.title }}</div>
         <div class="section-content col-sm-6">{{ section.content | markdownify }}</div>
       </div>
@@ -30,7 +30,7 @@
     </main>
 
     <!-- footer -->
-    <footer class="container" aria-label="Footer">
+    <footer class="row" aria-label="Footer">
       &copy; simple-resume
     </footer>
 
