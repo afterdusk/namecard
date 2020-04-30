@@ -5,12 +5,14 @@
 // google fonts
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+// social media buttons
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 /***** FONTS *****/
-$font-size-base: 1.3em;
-$font-size-h2: 1.8em;
-$font-size-h1: 3.2em;
-$font-size-jumbo: 4em;
+$font-size-base: 1.6rem;
+$font-size-jumbo: 4.2rem;
+$icon-size: 4.2rem;
+$icon-width: 4.2rem;
 
 $font-family: 'Raleway', sans-serif;
 $font-family-secondary: 'Roboto', sans-serif;
@@ -49,11 +51,11 @@ h6 {
   line-height: 1.2em;
 
   a {
-    color:inherit;
+    color: inherit;
   }
 }
 
-p{
+p {
   font-size: $font-size-base;
   margin-top: 0.2em;
   margin-bottom: 0.2em;
@@ -84,7 +86,8 @@ table {
   width: 100%;
 }
 
-td, th {
+td,
+th {
   font-size: $font-size-base;
   margin-top: 0.2em;
   margin-bottom: 0.2em;
@@ -97,6 +100,14 @@ td, th {
   color: $font-color-dark;
 
   .accent-color {
+    color: $font-accent-color-dark;
+  }
+
+  .fa {
+    color: $font-color-dark;
+  }
+
+  .fa:hover {
     color: $font-accent-color-dark;
   }
 }
@@ -145,4 +156,19 @@ main {
 footer {
   flex-shrink: none;
   text-align: right;
+}
+
+.fa {
+  color: $font-color;
+  margin: 0.6em;
+  margin-left: 0;
+  font-size: $icon-size;
+  width: $icon-width;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  color: $font-accent-color;
+  text-decoration: none;
 }

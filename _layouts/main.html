@@ -15,6 +15,27 @@
         <div class="intro col-sm-8" aria-label="Intro">
           <div class="intro-title">{{ site.intro_title | markdownify }}</div>
           <div class="intro-content">{{ site.intro_content | markdownify }}</div>
+          {%- if site.github_url -%}
+            <a href="{{ site.github_url }}" class="fa fa-github" title="GitHub profile"></a>
+          {%- endif -%}
+          {%- if site.stack_overflow_url -%}
+            <a href="{{ site.stack_overflow_url }}" class="fa fa-stack-overflow" title="Stack Overflow profile"></a>
+          {%- endif -%}
+          {%- if site.linkedin_url -%}
+            <a href="{{ site.linkedin_url }}" class="fa fa-linkedin" title="LinkedIn profile"></a>
+          {%- endif -%}
+          {%- if site.facebook_url -%}
+            <a href="{{ site.facebook_url }}" class="fa fa-facebook" title="Facebook profile"></a>
+          {%- endif -%}
+          {%- if site.twitter_url -%}
+            <a href="{{ site.twitter_url }}" class="fa fa-twitter" title="Twitter profile"></a>
+          {%- endif -%}
+          {%- if site.youtube_url -%}
+            <a href="{{ site.youtube_url }}" class="fa fa-youtube" title="YouTube profile"></a>
+          {%- endif -%}
+          {%- if site.email -%}
+            <a href="mailto:{{ site.email }}" class="fa fa-envelope" title="Email"></a>
+          {%- endif -%}
         </div>
       </div>
 
