@@ -7,24 +7,22 @@
 
   <body>
 
-    <!-- navbar -->
+    <!-- TODO: navbar -->
 
     <main class="container-fluid">
       <!-- intro -->
       <div class="row">
         <div class="intro col-sm-8" aria-label="Intro">
-          <div class="intro-title">{{ site.intro_title | strip | markdownify }}</div>
-          <div class="intro-content">
-            {{ site.intro_content | strip | markdownify }}
-          </div>
+          <div class="intro-title">{{ site.intro_title | markdownify }}</div>
+          <div class="intro-content">{{ site.intro_content | markdownify }}</div>
         </div>
       </div>
 
       <!-- body -->
       {% for section in site.sections %}
       <div class="section row" aria-label="Sections">
-        <div class="section-title col-sm-6">{{ section.title }}</div>
-        <div class="section-content col-sm-6">{{ section.content | markdownify }}</div>
+        <div class="section-title col-sm-5">{{ section.title | markdownify }}</div>
+        <div class="section-content col-sm-7">{{ section.content | markdownify }}</div>
       </div>
       {% endfor %}
     </main>
@@ -35,5 +33,15 @@
     </footer>
 
   </body>
+  <script>
+    // dark mode
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.classList.add("dark-mode");
+    }
+    // usage: <button onclick="toggleDarkMode()"></button>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 
 </html>
