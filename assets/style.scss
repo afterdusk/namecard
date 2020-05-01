@@ -8,6 +8,9 @@
 // social media buttons
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
+$xs-breakpoint: 480px;
+$sm-breakpoint: 768px;
+
 /***** FONTS *****/
 $font-size-base: 1.6rem;
 $font-size-jumbo: 4.2rem;
@@ -187,5 +190,16 @@ footer {
   }
 }
 
-/***** TODO: PAGE STYLEING (MOBILE) *****/
-// @include media-breakpoint-up(xs) {  }
+/***** PAGE STYLING (MOBILE) *****/
+@media only screen and (max-width : $xs-breakpoint) {
+  body {
+    padding: 7rem 2rem;
+  }
+
+  .nav-bar {
+    .nav-item {
+      display: block;
+      margin: 1em 0em;
+    }
+  }
+}
