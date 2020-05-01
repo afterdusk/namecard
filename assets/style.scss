@@ -23,14 +23,14 @@ $font-family-secondary: 'Roboto', sans-serif;
 /***** COLORS *****/
 $background-color: #ffffff;
 $background-color-dark: #0e171c;
-$font-color: #000000;
-$font-color-dark: #ffffff;
-$font-accent-color: #0070c0;
-$font-accent-color-dark: #039cfd;
+$text-color: #000000;
+$text-color-dark: #ffffff;
+$text-accent-color: #0070c0;
+$text-accent-color-dark: #039cfd;
 
 /***** MARKDOWN INJECTABLE CLASSES *****/
 .accent-color { // usage: {: .accent-color}
-  color: $font-accent-color;
+  color: $text-accent-color;
 }
 
 .jumbo-font { // usage: {: .jumbo-font}
@@ -111,7 +111,7 @@ body {
   padding: 7rem 10rem; // top-bottom left-right
 
   background-color: $background-color;
-  color: $font-color;
+  color: $text-color;
   font-family: $font-family;
   font-size: $font-size-base;
 }
@@ -126,7 +126,7 @@ body {
   }
 
   .nav-item:hover {
-    color: $font-accent-color;
+    color: $text-accent-color;
     text-decoration: none;
   }
 }
@@ -168,25 +168,25 @@ footer {
 }
 
 .fa:hover {
-  color: $font-accent-color;
+  color: $text-accent-color;
   text-decoration: none;
 }
 
 /***** DARK MODE *****/
 .dark-mode {
   background-color: $background-color-dark;
-  color: $font-color-dark;
+  color: $text-color-dark;
 
   .accent-color {
-    color: $font-accent-color-dark;
+    color: $text-accent-color-dark;
   }
 
   .fa:hover {
-    color: $font-accent-color-dark;
+    color: $text-accent-color-dark;
   }
 
   .nav-item:hover {
-    color: $font-accent-color-dark;
+    color: $text-accent-color-dark;
   }
 }
 
