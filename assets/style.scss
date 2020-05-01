@@ -16,7 +16,6 @@ $icon-width: 4.2rem;
 
 $font-family: 'Raleway', sans-serif;
 $font-family-secondary: 'Roboto', sans-serif;
-$font-weight-regular: 400;
 
 /***** COLORS *****/
 $background-color: #ffffff;
@@ -94,28 +93,11 @@ th {
   padding: 0.4em 0;
 }
 
-/***** DARK MODE *****/
-.dark-mode {
-  background-color: $background-color-dark;
-  color: $font-color-dark;
-
-  .accent-color {
-    color: $font-accent-color-dark;
-  }
-
-  .fa {
-    color: $font-color-dark;
-  }
-
-  .fa:hover {
-    color: $font-accent-color-dark;
-  }
-}
-
 /***** PAGE STYLING *****/
 html,
 body {
   min-height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -128,8 +110,22 @@ body {
   background-color: $background-color;
   color: $font-color;
   font-family: $font-family;
-  font-weight: $font-weight-regular;
   font-size: $font-size-base;
+}
+
+.nav-bar {
+  text-align: right;
+
+  .nav-item {
+    color: inherit;
+    font-weight: bold;
+    margin: 0.4rem;
+  }
+
+  .nav-item:hover {
+    color: $font-accent-color;
+    text-decoration: none;
+  }
 }
 
 main {
@@ -159,7 +155,7 @@ footer {
 }
 
 .fa {
-  color: $font-color;
+  color: inherit;
   margin: 0.6em;
   margin-left: 0;
   font-size: $icon-size;
@@ -172,3 +168,24 @@ footer {
   color: $font-accent-color;
   text-decoration: none;
 }
+
+/***** DARK MODE *****/
+.dark-mode {
+  background-color: $background-color-dark;
+  color: $font-color-dark;
+
+  .accent-color {
+    color: $font-accent-color-dark;
+  }
+
+  .fa:hover {
+    color: $font-accent-color-dark;
+  }
+
+  .nav-item:hover {
+    color: $font-accent-color-dark;
+  }
+}
+
+/***** TODO: PAGE STYLEING (MOBILE) *****/
+// @include media-breakpoint-up(xs) {  }
