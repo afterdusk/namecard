@@ -8,8 +8,7 @@
   <body>
 
     <!-- TODO: navbar -->
-
-    <nav class="nav-bar">
+    <nav class="nav-bar" aria-label="Navigation Bar">
       {% for section in site.sections %}
         {% if section.anchor %}
           <a class="nav-item" href="#{{ section.anchor }}">{{ section.title | markdownify | strip_html }}</a>
@@ -57,7 +56,7 @@
     </main>
 
     <!-- footer -->
-    <footer class="row" aria-label="Footer">
+    <footer class="footer" aria-label="Footer">
       &copy; namecard
     </footer>
 
