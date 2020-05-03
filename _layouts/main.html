@@ -7,9 +7,12 @@
 
   <body>
 
+    <!-- necessary as specifying collection order in _config.yml is not possible in Jekyll 3 -->
+    {% assign sorted_sections = site.sections | sort: 'order' %}
+
     <!-- navbar -->
     <nav class="nav-bar" aria-label="Navigation Bar">
-      {% for section in site.sections %}
+      {% for section in sorted_sections %}
         {% if section.anchor %}
           <a class="nav-item" href="{{ section.anchor  | prepend: '#' | relative_url }}">
             {{ section.title | markdownify | strip_html }}
@@ -49,7 +52,7 @@
       </div>
 
       <!-- sections -->
-      {% for section in site.sections %}
+      {% for section in sorted_sections %}
       <div class="section row" aria-label="Sections">
         <div id="{{ section.anchor }}" class="section-title col-sm-5">{{ section.title | markdownify }}</div>
         <div class="section-content col-sm-7">{{ section.content | markdownify }}</div>
