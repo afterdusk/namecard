@@ -31,6 +31,10 @@ $text-accent-color-dark: #039cfd;
 /***** MARKDOWN INJECTABLE CLASSES *****/
 .accent-color { // usage: {: .accent-color}
   color: $text-accent-color;
+
+  a {
+    color:inherit
+  }
 }
 
 .jumbo-font { // usage: {: .jumbo-font}
@@ -51,10 +55,6 @@ h6 {
   margin-top: 0.2em;
   margin-bottom: 0.2em;
   line-height: 1.2em;
-
-  a {
-    color: inherit;
-  }
 }
 
 p {
@@ -73,6 +73,11 @@ ol {
 li {
   font-size: $font-size-base;
   margin-bottom: 0.2em;
+}
+
+a:hover {
+  text-decoration: none;
+  opacity: 0.85;
 }
 
 img {
