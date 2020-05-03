@@ -25,8 +25,8 @@ $background-color: #ffffff;
 $background-color-dark: #0e171c;
 $text-color: #000000;
 $text-color-dark: #ffffff;
-$text-accent-color: #0070c0;
-$text-accent-color-dark: #039cfd;
+$text-accent-color: {{ site.accent_color | default: "#0070c0" }};
+$text-accent-color-dark: {{ site.accent_color_dark | default: "#039cfd" }};
 
 /***** MARKDOWN INJECTABLE CLASSES *****/
 .accent-color { // usage: {: .accent-color}
