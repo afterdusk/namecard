@@ -64,22 +64,7 @@
     {%- include footer.html -%}
 
   </body>
-  <script>
-    const darkModeQuery = '(prefers-color-scheme: dark)';
-    const darkModeClass = 'dark-mode'
 
-    // dark mode
-    if (window.matchMedia && window.matchMedia(darkModeQuery).matches) {
-      document.body.classList.add(darkModeClass);
-    }
-
-    window.matchMedia(darkModeQuery).addEventListener('change', e => {
-      toggleDarkMode();
-    });
-
-    function toggleDarkMode() {
-      document.body.classList.toggle(darkModeClass);
-    }
-  </script>
-
+  <!-- dark mode -->
+  {%- include dark_mode.html -%}
 </html>

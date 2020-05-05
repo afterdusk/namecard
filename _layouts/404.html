@@ -1,0 +1,26 @@
+---
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    <main class="container-fluid">
+      <div class="row">
+        <div class="intro col-sm-8">
+          {{ page.content | markdownify }}
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    {%- include footer.html -%}
+
+  </body>
+
+  <!-- dark mode -->
+  {%- include dark_mode.html -%}
+
+</html>
