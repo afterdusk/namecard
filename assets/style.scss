@@ -102,9 +102,8 @@ th {
 }
 
 /***** PAGE STYLING *****/
-html,
-body {
-  min-height: 100%;
+html {
+  height: 100%;
   scroll-behavior: smooth;
 }
 
@@ -112,6 +111,7 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 100rem;
+  min-height: 100%;
   margin: auto;
   padding: 7rem 10rem; // top-bottom left-right
 
@@ -121,7 +121,7 @@ body {
   font-size: $font-size-base;
 }
 
-.nav-bar {
+nav {
   text-align: right;
 
   .nav-item {
@@ -137,7 +137,7 @@ body {
 }
 
 main {
-  flex-grow: 1 0 auto;
+  flex-grow: 1;
 
   .intro {
     padding: 10em 1rem;
@@ -157,8 +157,9 @@ main {
   }
 }
 
-.footer {
-  flex-shrink: none;
+footer {
+  align-self: end;
+  width: 100%;
   text-align: right;
 }
 
