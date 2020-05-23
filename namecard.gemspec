@@ -3,10 +3,10 @@
 Gem::Specification.new do |spec|
   spec.name          = "namecard"
   spec.version       = "0.1.0"
-  spec.authors       = ["Liang Jun"]
-  spec.email         = ["au.liangjun@gmail.com"]
+  spec.authors       = ["afterdusk"]
+  spec.email         = ["hello@evanau.dev"]
 
-  spec.summary       = "Markdown driven, single page CV targeted at developers"
+  spec.summary       = "Markdown driven, single page CV"
   spec.homepage      = "https://www.github.com/afterdusk/namecard"
   spec.license       = "MIT"
 

@@ -1,12 +1,24 @@
 # namecard
+### *namecard* is a markdown-driven, single page CV
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+![namecard](/assets/namecard.png)
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+**markdown-driven**: all of the content and most of the styling on the site can be edited with markdown, which is flexible and easy to use
 
-TODO: Delete this and the text above, and describe your gem
+**single page**: a single page is concise and doesn't overwhelm visitors - see the [*KISS*](https://en.wikipedia.org/wiki/KISS_principle) principle
+
+## Usage
+
+Usage instructions and theme options are available at https://github.com/afterdusk/use-namecard, an example site using *namecard*. I highly recommend cloning the repository and editing the content from the template instead of performing an install on an existing repo.
 
 ## Installation
+There are two ways of installing Jekyll themes:
+
+### 1. Gem Installation
+---
+Note that this approach will not work with GitHub Pages build and deploy. If you are using this approach and want to deploy with GitHub Pages, you will have to build your site locally and only push the output `_site` folder.
+
+---
 
 Add this line to your Jekyll site's `Gemfile`:
 
@@ -24,26 +36,35 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Or install it yourself with:
 
     $ gem install namecard
 
-## Usage
+### 2. GitHub Pages Remote Theme
+If you plan to deploy with GitHub Pages, this is the far simpler approach of adding the theme to your site. Add the following line to your site's `_config.yml`:
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+```yaml
+remote_theme: afterdusk/namecard
+```
+
+In your `Gemfile`, ensure the following lines are commented out:
+```ruby
+# gem "namecard"
+# gem "jekyll", "~> 3.8.5"
+```
+
+And uncomment the line:
+```ruby
+gem "github-pages", "~> 204", group: :jekyll_plugins
+```
+
+Note: Make sure a version number is included in the above line
+
+You can then [test the site locally](https://help.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll) before [deploying to GitHub pages](https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site-with-jekyll).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `namecard.gemspec` accordingly.
+Bug reports, suggestions and pull requests are welcome on GitHub at https://github.com/afterdusk/namecard. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
