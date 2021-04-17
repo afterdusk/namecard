@@ -1,12 +1,10 @@
----
----
 <script>
   const darkModeQuery = '(prefers-color-scheme: dark)';
   const darkModeClass = 'dark-mode'
 
   {% assign dark_mode = site.dark_mode | default: "system" %}
 
-  {% if dark_mode == "system"%}
+  {% if dark_mode == "system" %}
     // set initial theme based on system preferences
     if (window.matchMedia && window.matchMedia(darkModeQuery).matches) {
       document.body.classList.add(darkModeClass);
@@ -18,12 +16,12 @@
     });
   {% endif %}
 
-  {% if dark_mode == "always"%}
+  {% if dark_mode == "always" %}
     // set dark mode
     document.body.classList.add(darkModeClass);
   {% endif %}
 
-  {% if dark_mode == "never"%}
-    // do nothing, since light mode is by default
+  {% if dark_mode == "never" %}
+    // do nothing, since dark mode is off by default
   {% endif %}
 </script>
