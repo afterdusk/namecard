@@ -1,16 +1,29 @@
+---
+---
 <script>
   const darkModeQuery = '(prefers-color-scheme: dark)';
   const darkModeClass = 'dark-mode'
 
-  if (window.matchMedia && window.matchMedia(darkModeQuery).matches) {
+  {% assign dark_mode = site.dark_mode | default: "system" %}
+
+  {% if dark_mode == "system"%}
+    // set initial theme based on system preferences
+    if (window.matchMedia && window.matchMedia(darkModeQuery).matches) {
+      document.body.classList.add(darkModeClass);
+    }
+
+    // watch for changes in system preferences
+    window.matchMedia(darkModeQuery).addEventListener('change', e => {
+      document.body.classList.toggle(darkModeClass);
+    });
+  {% endif %}
+
+  {% if dark_mode == "always"%}
+    // set dark mode
     document.body.classList.add(darkModeClass);
-  }
+  {% endif %}
 
-  window.matchMedia(darkModeQuery).addEventListener('change', e => {
-    toggleDarkMode();
-  });
-
-  function toggleDarkMode() {
-    document.body.classList.toggle(darkModeClass);
-  }
+  {% if dark_mode == "never"%}
+    // do nothing, since light mode is by default
+  {% endif %}
 </script>
